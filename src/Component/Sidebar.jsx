@@ -1,24 +1,30 @@
 const Sidebar = () => {
+  const items = [
+    "Command",
+    "Grid Control",
+    "Response",
+    "Logs",
+    "Audit",
+    "Encryption",
+  ];
+
   return (
-    <aside className="w-64 min-h-screen bg-base-200 p-5 hidden lg:block">
-      
-      <h1 className=" text-amber-800 p-5 text-4xl font-bold mb-6">Menu</h1>
+    <aside className="w-64 bg-neutral-950 border-r border-yellow-500/20 p-4 flex flex-col h-screen">
+      <h1 className="text-2xl font-bold mb-6">CUBICSEC</h1>
 
-      <ul className="menu bg-base-200 gap-8  text-2xl rounded-box">
-        <li>
-          <button className="active">Dashboard</button>
-        </li>
-        <li>
-          <button>Analytics</button>
-        </li>
-        <li>
-          <button>Users</button>
-        </li>
-        <li>
-          <button>Settings</button>
-        </li>
+      <ul className="space-y-3 text-sm flex-1">
+        {items.map((item) => (
+          <li
+            key={item}
+            className="p-2 hover:bg-yellow-500/10 rounded cursor-pointer"
+          >
+            {item}
+          </li>
+        ))}
       </ul>
-
+      <button className="btn btn-error btn-sm w-full mt-auto">
+        EMERGENCY KILL
+      </button>
     </aside>
   );
 };

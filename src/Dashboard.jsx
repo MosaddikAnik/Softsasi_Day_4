@@ -1,23 +1,17 @@
-import './App.css'
-import Footer from './Component/Footer';
-import Header from './Component/Header';
-import Menu from './Component/Menu';
-import Sidebar from './Component/Sidebar';
+import Layout from "./Component/Layout";
+import LogsPanel from "./Component/LogsPanel";
+import ProtocolPanel from "./Component/ProtocolPanel";
+import ThreatMap from "./Component/ThreatMap";
 
-function Dashboard() {
 
+const Dashboard = () => {
   return (
-    <>
-     <div className=''>
-      <Header />
-     <div className='flex'>
-       <Sidebar/>
-      <Menu/>
-     </div>
-      <Footer/>
-     </div>
-    </>
-  )
-}
+    <Layout>
+      {/* Center */}
+        <ThreatMap />
+    </Layout>
+    
+  );
+};
 
 export default Dashboard;
